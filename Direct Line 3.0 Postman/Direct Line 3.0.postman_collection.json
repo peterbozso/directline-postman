@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4455aae8-850e-4c01-b393-9c84b6150791",
+		"_postman_id": "dd987fa5-5a5d-4b4a-92a8-8a9534b3e0e5",
 		"name": "Direct Line 3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -25,7 +25,10 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://directline.botframework.com/v3/directline/conversations",
 					"protocol": "https",
@@ -49,14 +52,13 @@
 				"method": "POST",
 				"header": [
 					{
-						"disabled": false,
 						"key": "Content-Type",
 						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"type\": \"message\",\r\n    \"from\": {\r\n        \"id\": \"user1\"\r\n    },\r\n    \"name\": \"MyCustomEvent\",\r\n\t\"value\": {\r\n  \t\t\"myCustomProperty\": \"myCustomValue\"\r\n\t}\r\n}"
+					"raw": "{\r\n    \"type\": \"event\",\r\n    \"from\": {\r\n        \"id\": \"user1\"\r\n    },\r\n    \"name\": \"MyCustomEvent\",\r\n\t\"value\": {\r\n  \t\t\"myCustomProperty\": \"myCustomValue\"\r\n\t}\r\n}"
 				},
 				"url": {
 					"raw": "https://directline.botframework.com/v3/directline/conversations/{{conversationId}}/activities",
@@ -84,8 +86,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"disabled": false
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -116,7 +117,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://directline.botframework.com/v3/directline/conversations/{{conversationId}}/activities",
 					"protocol": "https",
